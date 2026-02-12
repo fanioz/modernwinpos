@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "modernwinpos (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "modernwinpos (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
