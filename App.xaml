@@ -5,45 +5,57 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:modernwinpos"
+    xmlns:converters="using:modernwinpos.Converters"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
-                <!-- Other merged dictionaries here -->
             </ResourceDictionary.MergedDictionaries>
-            <!-- Other app resources here -->
-            <Color x:Key="Primary">#512BD4</Color>
 
-            <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}" />
-            <SolidColorBrush x:Key="WhiteBrush" Color="White" />
-            <SolidColorBrush x:Key="BlackBrush" Color="Black" />
+            <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
-            <x:Double x:Key="AppFontSize">14</x:Double>
+            <Color x:Key="PrimaryColor">#137fec</Color>
+            <Color x:Key="BackgroundColor">#f6f7f8</Color>
+            <Color x:Key="BackgroundDarkColor">#101922</Color>
+            <Color x:Key="SurfaceDarkColor">#1c2632</Color>
+            <Color x:Key="BorderDarkColor">#2d3a4b</Color>
+            <Color x:Key="WhiteColor">#FFFFFF</Color>
 
-            <Style x:Key="MyLabel" TargetType="TextBlock">
-                <Setter Property="Foreground"
-                        Value="{StaticResource PrimaryBrush}" />
+            <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}" />
+            <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource BackgroundDarkColor}" /> <!-- Assuming dark mode for now as per design -->
+            <SolidColorBrush x:Key="SurfaceBrush" Color="{StaticResource SurfaceDarkColor}" />
+            <SolidColorBrush x:Key="BorderBrush" Color="{StaticResource BorderDarkColor}" />
+            <SolidColorBrush x:Key="WhiteBrush" Color="{StaticResource WhiteColor}" />
+
+            <Style TargetType="TextBlock" x:Key="HeaderTextStyle">
+                <Setter Property="FontSize" Value="24"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
             </Style>
 
-            <Style x:Key="Action" TargetType="Button">
-                <Setter Property="FontSize"
-                        Value="{StaticResource AppFontSize}" />
-                <Setter Property="Padding"
-                        Value="14,10" />
+            <Style TargetType="TextBlock" x:Key="BodyTextStyle">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="Foreground" Value="#CCCCCC"/>
             </Style>
 
-            <Style x:Key="PrimaryAction"
-                   TargetType="Button"
-                   BasedOn="{StaticResource Action}">
-                <Setter Property="Background"
-                        Value="{StaticResource PrimaryBrush}" />
-                <Setter Property="CornerRadius"
-                        Value="8" />
-                <Setter Property="Foreground"
-                        Value="{StaticResource WhiteBrush}" />
+             <Style TargetType="Button" x:Key="PrimaryButtonStyle">
+                <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="CornerRadius" Value="8"/>
+                <Setter Property="Padding" Value="16,8"/>
+                <Setter Property="BorderThickness" Value="0"/>
             </Style>
+
+             <Style TargetType="Button" x:Key="NavButtonStyle">
+                 <Setter Property="Background" Value="Transparent"/>
+                 <Setter Property="Foreground" Value="#94A3B8"/> <!-- Slate-400 equivalent -->
+                 <Setter Property="CornerRadius" Value="8"/>
+                 <Setter Property="Padding" Value="10"/>
+                 <Setter Property="BorderThickness" Value="0"/>
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
