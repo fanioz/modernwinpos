@@ -18,27 +18,13 @@ namespace modernwinpos.Views
             this.InitializeComponent();
             ViewModel = new MainViewModel();
             DataContext = ViewModel;
+        }
 
-            // Initialize navigation service
-            NavigationService.Initialize(ContentFrame);
-
-            // Hide welcome when a page is navigated to
-            ContentFrame.NavigatedTo += (s, e) =>
-            {
-                if (ContentFrame.Content != null)
-                {
-                    WelcomeGrid.Visibility = Visibility.Collapsed;
-                }
-            };
-
-            // Show welcome when back at main page
-            ContentFrame.NavigatedFrom += (s, e) =>
-            {
-                if (e.NavigationMode == NavigationMode.Back && ContentFrame.Content == null)
-                {
-                    WelcomeGrid.Visibility = Visibility.Visible;
-                }
-            };
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            ViewModel = new MainViewModel();
+            DataContext = ViewModel;
         }
     }
 }
