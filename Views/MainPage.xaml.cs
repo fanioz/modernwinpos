@@ -1,3 +1,5 @@
+using Microsoft.UI.Xaml.Controls;
+
 namespace modernwinpos.Views
 {
     /// <summary>
@@ -10,6 +12,6 @@ namespace modernwinpos.Views
             this.InitializeComponent();
         }
 
-        public MainViewModel ViewModel => new();
+        public MainViewModel ViewModel { get; } = new();
     }
 }

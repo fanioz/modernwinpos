@@ -14,9 +14,24 @@
                 <!-- Other merged dictionaries here -->
             </ResourceDictionary.MergedDictionaries>
             <!-- Other app resources here -->
-            <Color x:Key="Primary">#512BD4</Color>
+            <Color x:Key="Primary">#137fec</Color>
+            <Color x:Key="BackgroundDark">#101922</Color>
+            <Color x:Key="BackgroundLight">#f6f7f8</Color>
+            <Color x:Key="CardBackground">#1e293b</Color>
+            <Color x:Key="AlertRed">#ef4444</Color>
+            <Color x:Key="SuccessGreen">#22c55e</Color>
+            <Color x:Key="TextPrimary">#f1f5f9</Color>
+            <Color x:Key="TextSecondary">#94a3b8</Color>
 
             <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}" />
+            <SolidColorBrush x:Key="BackgroundDarkBrush" Color="{StaticResource BackgroundDark}" />
+            <SolidColorBrush x:Key="BackgroundLightBrush" Color="{StaticResource BackgroundLight}" />
+            <SolidColorBrush x:Key="CardBackgroundBrush" Color="{StaticResource CardBackground}" />
+            <SolidColorBrush x:Key="AlertRedBrush" Color="{StaticResource AlertRed}" />
+            <SolidColorBrush x:Key="SuccessGreenBrush" Color="{StaticResource SuccessGreen}" />
+            <SolidColorBrush x:Key="TextPrimaryBrush" Color="{StaticResource TextPrimary}" />
+            <SolidColorBrush x:Key="TextSecondaryBrush" Color="{StaticResource TextSecondary}" />
+
             <SolidColorBrush x:Key="WhiteBrush" Color="White" />
             <SolidColorBrush x:Key="BlackBrush" Color="Black" />
 
