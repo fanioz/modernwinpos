@@ -1,22 +1,29 @@
-﻿namespace modernwinpos.ViewModels
+using CommunityToolkit.Mvvm.Input;
+using modernwinpos.Services;
+using modernwinpos.Views;
+
+namespace modernwinpos.ViewModels
 {
+    /// <summary>
+    /// Main navigation hub ViewModel
+    /// </summary>
     public partial class MainViewModel : BaseViewModel
     {
-        private int count = 0;
-
         public MainViewModel()
         {
-            Title = "Home";
+            Title = "Modern POS";
         }
 
-        [ObservableProperty]
-        private string _countText = "Current count: 0";
+        [RelayCommand]
+        private void NavigateToPOS()
+        {
+            NavigationService.NavigateTo<POSPage>();
+        }
 
         [RelayCommand]
-        private void Increment()
+        private void NavigateToInventory()
         {
-            count++;
-            CountText = $"Current count: {count}";
+            NavigationService.NavigateTo<InventoryPage>();
         }
     }
 }

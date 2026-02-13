@@ -7,6 +7,7 @@
 
         <!-- WinUI 3 -->
         <UseWinUI>true</UseWinUI>
+        <EnableDefaultPageItems>false</EnableDefaultPageItems>
         <EnableMsixTooling>true</EnableMsixTooling>
         <WindowsPackageType>None</WindowsPackageType>
         <!-- <WindowsSdkPackageVersion>10.0.19041.38</WindowsSdkPackageVersion> -->
