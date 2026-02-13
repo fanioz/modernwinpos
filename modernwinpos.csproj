@@ -43,6 +43,12 @@
     </ItemGroup>
 
     <ItemGroup>
+        <Page Include="Views\POSPage.xaml" />
+        <Page Include="Views\InventoryPage.xaml" />
+        <Page Include="Views\MainPage.xaml" />
+    </ItemGroup>
+
+    <ItemGroup>
         <PackageReference Include="Microsoft.WindowsAppSDK" />
         <PackageReference Include="Microsoft.Web.WebView2" />
         <PackageReference Include="Microsoft.Windows.SDK.BuildTools" />

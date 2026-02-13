@@ -47,8 +47,6 @@
             <!-- Header -->
             <Grid Grid.Row="0" Margin="0,0,0,24">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
                 <Grid>
